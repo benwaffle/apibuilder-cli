@@ -429,7 +429,7 @@ elsif command == "update"
                 end
               else
                 if different?(file.contents, existing_source)
-                  puts "changed"
+                  puts "\033[1mchanged\033[0m"
                   updates << { :source => file.contents, :generator => generator.name, :target => target_path }
                 else
                   puts "unchanged"
